@@ -1,0 +1,463 @@
+Uptime
+12:07  up 1 day, 14:57, 2 users, load averages: 2.08 2.32 2.84
+USER       TTY      FROM    LOGIN@  IDLE WHAT
+rgant      console  -      Wed21   1day  -
+rgant      s000     -      12:07       - w
+
+Disk Usage
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   926Gi    10Gi   418Gi     3%    412k  4.3G    0%   /
+/dev/disk3s6     926Gi    20Ki   418Gi     1%       0  4.4G    0%   /System/Volumes/VM
+/dev/disk3s6     926Gi    20Ki   418Gi     1%       0  4.4G    0%   /System/Volumes/VM
+/dev/disk3s2     926Gi   6.4Gi   418Gi     2%    1.3k  4.4G    0%   /System/Volumes/Preboot
+/dev/disk3s4     926Gi   2.8Mi   418Gi     1%      53  4.4G    0%   /System/Volumes/Update
+/dev/disk1s2     500Mi   6.0Mi   481Mi     2%       1  4.9M    0%   /System/Volumes/xarts
+/dev/disk1s1     500Mi   5.4Mi   481Mi     2%      34  4.9M    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3     500Mi   2.8Mi   481Mi     1%      87  4.9M    0%   /System/Volumes/Hardware
+/dev/disk3s5     926Gi   490Gi   418Gi    54%    4.6M  4.4G    0%   /System/Volumes/Data
+
+Network
+Patroclus.home.robgant.com
+192.168.36.149
+fd9a:49a2:4ad4:0:10fb:cbca:4783:b0ce
+--------------------------------------------------------------------------------
+Patroclus:~$ java -XshowSettings:properties -version
+Property settings:
+    file.encoding = UTF-8
+    file.separator = /
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    java.class.path = 
+    java.class.version = 67.0
+    java.home = /Library/Java/JavaVirtualMachines/jdk-23.jdk/Contents/Home
+    java.io.tmpdir = /var/folders/0z/3f6c6fvd75b9t93szh2_jjs00000gn/T/
+    java.library.path = /Users/rgant/Library/Java/Extensions
+        /Library/Java/Extensions
+        /Network/Library/Java/Extensions
+        /System/Library/Java/Extensions
+        /usr/lib/java
+        .
+    java.runtime.name = Java(TM) SE Runtime Environment
+    java.runtime.version = 23.0.2+7-58
+    java.specification.name = Java Platform API Specification
+    java.specification.vendor = Oracle Corporation
+    java.specification.version = 23
+    java.vendor = Oracle Corporation
+    java.vendor.url = https://java.oracle.com/
+    java.vendor.url.bug = https://bugreport.java.com/bugreport/
+    java.version = 23.0.2
+    java.version.date = 2025-01-21
+    java.vm.compressedOopsMode = Zero based
+    java.vm.info = mixed mode, sharing
+    java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+    java.vm.specification.name = Java Virtual Machine Specification
+    java.vm.specification.vendor = Oracle Corporation
+    java.vm.specification.version = 23
+    java.vm.vendor = Oracle Corporation
+    java.vm.version = 23.0.2+7-58
+    jdk.debug = release
+    line.separator = \n 
+    native.encoding = UTF-8
+    os.arch = aarch64
+    os.name = Mac OS X
+    os.version = 15.3
+    path.separator = :
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    stderr.encoding = UTF-8
+    stdout.encoding = UTF-8
+    sun.arch.data.model = 64
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk-23.jdk/Contents/Home/lib
+    sun.cpu.endian = little
+    sun.io.unicode.encoding = UnicodeBig
+    sun.java.launcher = SUN_STANDARD
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.country = US
+    user.dir = /Users/rgant
+    user.home = /Users/rgant
+    user.language = en
+    user.name = rgant
+
+java version "23.0.2" 2025-01-21
+Java(TM) SE Runtime Environment (build 23.0.2+7-58)
+Java HotSpot(TM) 64-Bit Server VM (build 23.0.2+7-58, mixed mode, sharing)
+Patroclus:~$ bgc
+Patroclus:~$ cd Programming/
+100Danish/                            Singularity-Energy/                   True-Impact/                          homedir/                              utterz_holycow/
+APODDownloader/                       SiteSpect/                            VERV-tv/                              my-angular-schematics/                youtube-music-playlist/
+Happier/                              SublimeLinter-contrib-dockerfilelint/ angular-eslint/                       rob.gant.ninja/                       
+LearnLux/                             SublimeLinter-contrib-nglint/         brainfry/                             saas-api-boilerplate/                 
+OakCard/                              SublimeLinter-contrib-tflint/         cat-watcher/                          sixQ/                                 
+ScoutSuite/                           SublimeLinter-eslint/                 emulator-demo/                        tmp-eslint-perfectionist-test/        
+Patroclus:~$ cd Programming/emulator-demo/
+Patroclus:~/Programming/emulator-demo (main *+)$ npx firebase emulators:exec 'ng test --no-watch'
+npm error could not determine executable to run
+npm error A complete log of this run can be found in: /Users/rgant/.npm/_logs/2025-02-14T17_07_57_514Z-debug-0.log
+Patroclus:~/Programming/emulator-demo (main *+)$ nvm use 20
+Now using node v20.18.1 (npm v11.1.0)
+Patroclus:~/Programming/emulator-demo (main *+)$ echo '20' > .nvmrc
+Patroclus:~/Programming/emulator-demo (main *+)$ git a .nvmrc
+Patroclus:~/Programming/emulator-demo (main *+)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   .nvmrc
+	new file:   Terminal-Saved-Output.txt
+	new file:   firebase-debug.log
+	modified:   firebase.json
+	new file:   firestore-debug.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Terminal-Saved-Output.txt
+	deleted:    firebase-debug.log
+	modified:   firestore-debug.log
+
+Patroclus:~/Programming/emulator-demo (main *+)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   .nvmrc
+	new file:   Terminal-Saved-Output.txt
+	new file:   firebase-debug.log
+	modified:   firebase.json
+	new file:   firestore-debug.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Terminal-Saved-Output.txt
+	modified:   firestore-debug.log
+
+Patroclus:~/Programming/emulator-demo (main *+)$ git mv Terminal-Saved-Output.txt Terminal-Saved-Output-java-17.txt 
+Patroclus:~/Programming/emulator-demo (main *+)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   .nvmrc
+	new file:   Terminal-Saved-Output-java-17.txt
+	new file:   firebase-debug.log
+	modified:   firebase.json
+	new file:   firestore-debug.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Terminal-Saved-Output-java-17.txt
+	modified:   firestore-debug.log
+
+Patroclus:~/Programming/emulator-demo (main *+)$ git a Terminal-Saved-Output-java-17.txt 
+Patroclus:~/Programming/emulator-demo (main *+)$ git d firestore-debug.log 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+modified: firestore-debug.log
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+@@ -1,4 +1,4 @@
+-Feb 14, 2025 12:03:34 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
++Feb 14, 2025 12:06:07 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+ INFO: Started WebSocket server on ws://127.0.0.1:9150
+ API endpoint: http://127.0.0.1:8080
+ If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+@@ -12,7 +12,11 @@ If you are running a Firestore in Datastore Mode project, run:
+ Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+ Dev App Server is now running.
+ 
+-Feb 14, 2025 12:03:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
++Feb 14, 2025 12:06:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
++INFO: Detected non-HTTP/2 connection.
++Feb 14, 2025 12:06:11 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
++INFO: Detected non-HTTP/2 connection.
++Feb 14, 2025 12:06:11 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+ INFO: Detected non-HTTP/2 connection.
+ *** shutting down gRPC server since JVM is shutting down
+ *** server shut down
+Patroclus:~/Programming/emulator-demo (main *+)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   .nvmrc
+	new file:   Terminal-Saved-Output-java-17.txt
+	new file:   firebase-debug.log
+	modified:   firebase.json
+	new file:   firestore-debug.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   firestore-debug.log
+
+Patroclus:~/Programming/emulator-demo (main *+)$ git a firestore-debug.log 
+Patroclus:~/Programming/emulator-demo (main +)$ git mv fire
+firebase-debug.log   firebase.json        firestore-debug.log  
+Patroclus:~/Programming/emulator-demo (main +)$ git mv firestore-debug.log fire
+firebase-debug.log   firebase.json        firestore-debug.log  
+Patroclus:~/Programming/emulator-demo (main +)$ git mv firestore-debug.log firestore-debug-java17.log 
+Patroclus:~/Programming/emulator-demo (main +)$ git mv firebase
+firebase-debug.log  firebase.json       
+Patroclus:~/Programming/emulator-demo (main +)$ git mv firebase-debug.log firebas
+firebase-debug.log  firebase.json       
+Patroclus:~/Programming/emulator-demo (main +)$ git mv firebase-debug.log firebase-debug-java17.log 
+Patroclus:~/Programming/emulator-demo (main +)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 12:10:16.518:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 12:10:16.518:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 12:10:16.520:INFO [launcher]: Starting browser Chrome
+14 02 2025 12:10:17.135:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket 2ppxx8nQoPJpHQcvAAAB with id 73096643
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/docs/zones.md'
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 0 of 1 SUCCESS (0 secs / 0 secs)
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/dChrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 SUCCESS (0.391 secs / 0.387 secs)
+TOTAL: 1 SUCCESS
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+Patroclus:~/Programming/emulator-demo (main +)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 12:10:32.808:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 12:10:32.809:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 12:10:32.811:INFO [launcher]: Starting browser Chrome
+14 02 2025 12:10:33.260:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket x98kG652QKtHKZ7YAAAB with id 45110646
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/docs/zones.md'
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 0 of 1 SUCCESS (0 secs / 0 secs)
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/dChrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 SUCCESS (0.332 secs / 0.329 secs)
+TOTAL: 1 SUCCESS
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+Patroclus:~/Programming/emulator-demo (main +)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 12:10:44.944:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 12:10:44.944:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 12:10:44.945:INFO [launcher]: Starting browser Chrome
+14 02 2025 12:10:45.401:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket jv790lwgml2Y7m1pAAAB with id 20625414
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/docs/zones.md'
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 0 of 1 SUCCESS (0 secs / 0 secs)
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/dChrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 SUCCESS (0.338 secs / 0.334 secs)
+TOTAL: 1 SUCCESS
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+Patroclus:~/Programming/emulator-demo (main +)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 12:11:02.768:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 12:11:02.768:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 12:11:02.770:INFO [launcher]: Starting browser Chrome
+14 02 2025 12:11:03.228:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket O9PlKUeIWFEoUKWxAAAB with id 20935278
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/docs/zones.md'
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 0 of 1 SUCCESS (0 secs / 0 secs)
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/dChrome 133.0.0.0 (Mac OS 10.15.7) DemoService should create a new document FAILED
+	Error: Timeout - Async function did not complete within 250ms (custom timeout)
+	    at <Jasmine>
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 (1 FAILED) (0.261 secs / 0.257 secs)
+TOTAL: 1 FAILED, 0 SUCCESS
+⚠  Script exited unsuccessfully (code 1)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+
+Error: Script "ng test --no-watch" exited with code 1
+Patroclus:~/Programming/emulator-demo (main *+)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 12:11:28.300:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 12:11:28.300:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 12:11:28.302:INFO [launcher]: Starting browser Chrome
+14 02 2025 12:11:28.791:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket wYo-s8B2UIJf1RTdAAAB with id 41999226
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/docs/zones.md'
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 0 of 1 SUCCESS (0 secs / 0 secs)
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/dChrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 SUCCESS (0.343 secs / 0.338 secs)
+TOTAL: 1 SUCCESS
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+Patroclus:~/Programming/emulator-demo (main *+)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   .nvmrc
+	new file:   Terminal-Saved-Output-java-17.txt
+	new file:   firebase-debug-java17.log
+	modified:   firebase.json
+	new file:   firestore-debug-java17.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   src/app/demo.service.spec.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	firebase-debug.log
+	firestore-debug.log
+
+Patroclus:~/Programming/emulator-demo (main *+)$ git ap
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+modified: src/app/demo.service.spec.ts
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+@@ -17,5 +17,5 @@ describe('DemoService', (): void => {
+   it('should create a new document', async (): Promise<void> => {
+     const id = await service.create('Demo Document');
+     expect(id).toBeTruthy();
+-  });
++  }, 500);
+ });
+(1/1) Stage this hunk [y,n,q,a,d,e,p,?]? y
+
+Patroclus:~/Programming/emulator-demo (main +)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   .nvmrc
+	new file:   Terminal-Saved-Output-java-17.txt
+	new file:   firebase-debug-java17.log
+	modified:   firebase.json
+	new file:   firestore-debug-java17.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	firebase-debug.log
+	firestore-debug.log
+
+Patroclus:~/Programming/emulator-demo (main +)$ git a fir
+firebase-debug.log   firestore-debug.log  
+Patroclus:~/Programming/emulator-demo (main +)$ git a fire*-debug.log
+Patroclus:~/Programming/emulator-demo (main +)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   .nvmrc
+	new file:   Terminal-Saved-Output-java-17.txt
+	new file:   firebase-debug-java17.log
+	new file:   firebase-debug.log
+	modified:   firebase.json
+	new file:   firestore-debug-java17.log
+	new file:   firestore-debug.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Patroclus:~/Programming/emulator-demo (main +)$ git cm "Update to java v23"
+[main f5cd856] Update to java v23
+ 15 files changed, 1069 insertions(+), 34 deletions(-)
+ create mode 100644 .firebaserc
+ create mode 100644 .nvmrc
+ create mode 100644 Terminal-Saved-Output-java-17.txt
+ create mode 100644 firebase-debug-java17.log
+ create mode 100644 firebase-debug.log
+ create mode 100644 firestore-debug-java17.log
+ create mode 100644 firestore-debug.log
+ delete mode 100644 src/app/app.component.spec.ts
+ create mode 100644 src/app/demo.service.spec.ts
+ create mode 100644 src/app/demo.service.ts
+ create mode 100644 src/app/firebase-app.provider.ts
+ create mode 100644 src/app/firestore.emulator.spec.ts
+Patroclus:~/Programming/emulator-demo (main)$ git remote add origin git@github.com:rgant/emulator-demo.git
+Patroclus:~/Programming/emulator-demo (main)$ git branch -M main
+Patroclus:~/Programming/emulator-demo (main)$ git push -u origin main
+Enumerating objects: 55, done.
+Counting objects: 100% (55/55), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (51/51), done.
+Writing objects: 100% (55/55), 154.32 KiB | 9.08 MiB/s, done.
+Total 55 (delta 12), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (12/12), done.
+To github.com:rgant/emulator-demo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+Patroclus:~/Programming/emulator-demo (main)$ 
