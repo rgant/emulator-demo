@@ -17,5 +17,5 @@ describe('DemoService', (): void => {
   it('should create a new document', async (): Promise<void> => {
     const id = await service.create('Demo Document');
     expect(id).toBeTruthy();
-  }, 500);
+  }, 250);
 });
