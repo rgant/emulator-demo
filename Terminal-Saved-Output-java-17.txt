@@ -1,0 +1,806 @@
+Patroclus:~$ nvm use 20
+Now using node v20.18.1 (npm v11.1.0)
+Patroclus:~$ cd Programming/
+Patroclus:~/Programming$ npx -p @angular/cli ng new emulator-demo
+Need to install the following packages:
+@angular/cli@19.1.7
+Ok to proceed? (y) y
+
+✔ Which stylesheet format would you like to use? Sass (SCSS)     [ https://sass-lang.com/documentation/syntax#scss                ]
+✔ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? No
+CREATE emulator-demo/README.md (1475 bytes)
+CREATE emulator-demo/.editorconfig (314 bytes)
+CREATE emulator-demo/.gitignore (587 bytes)
+CREATE emulator-demo/angular.json (2792 bytes)
+CREATE emulator-demo/package.json (1044 bytes)
+CREATE emulator-demo/tsconfig.json (915 bytes)
+CREATE emulator-demo/tsconfig.app.json (424 bytes)
+CREATE emulator-demo/tsconfig.spec.json (434 bytes)
+CREATE emulator-demo/.vscode/extensions.json (130 bytes)
+CREATE emulator-demo/.vscode/launch.json (470 bytes)
+CREATE emulator-demo/.vscode/tasks.json (938 bytes)
+CREATE emulator-demo/src/main.ts (250 bytes)
+CREATE emulator-demo/src/index.html (298 bytes)
+CREATE emulator-demo/src/styles.scss (80 bytes)
+CREATE emulator-demo/src/app/app.component.scss (0 bytes)
+CREATE emulator-demo/src/app/app.component.html (19903 bytes)
+CREATE emulator-demo/src/app/app.component.spec.ts (937 bytes)
+CREATE emulator-demo/src/app/app.component.ts (290 bytes)
+CREATE emulator-demo/src/app/app.config.ts (310 bytes)
+CREATE emulator-demo/src/app/app.routes.ts (77 bytes)
+CREATE emulator-demo/public/favicon.ico (15086 bytes)
+✔ Packages installed successfully.
+    Successfully initialized git.
+Patroclus:~/Programming$ cd emulator-demo/
+Patroclus:~/Programming/emulator-demo (main)$ ng add @angular/fire
+-bash: ng: command not found
+Patroclus:~/Programming/emulator-demo (main)$ npx ng add @angular/fire
+ 
+Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.dev/cli/analytics.
+
+   No
+Global setting: enabled
+Local setting: disabled
+Effective status: disabled
+✔ Determining Package Manager
+  › Using package manager: npm
+✔ Searching for compatible package version
+  › Found compatible package version: @angular/fire@19.0.0.
+✔ Loading package information from registry
+✔ Confirming installation
+✔ Installing package
+UPDATE package.json (1075 bytes)
+✔ Packages installed successfully.
+? What features would you like to setup? Firestore
+✔ firebase-tools installed globally.
+Using firebase-tools version 13.31.1
+? Which Firebase account would you like to use? robgant@gmail.com
+✔ Preparing the list of your Firebase projects
+? Please select a project: The Brain Fry
+✔ Preparing the list of your Firebase WEB apps
+? Please select an app: [CREATE NEW APP]
+? What would you like to call your app? demo
+✔ Creating your Web app
+✔ Downloading configuration data of your Firebase WEB app
+UPDATE .gitignore (641 bytes)
+UPDATE src/app/app.config.ts (792 bytes)
+Patroclus:~/Programming/emulator-demo (main *)$ git s
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .gitignore
+	modified:   angular.json
+	modified:   package-lock.json
+	modified:   package.json
+	modified:   src/app/app.config.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	firebase.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Patroclus:~/Programming/emulator-demo (main *)$ git a firebase.json .gitignore angular.json pa
+package-lock.json  package.json       
+Patroclus:~/Programming/emulator-demo (main *)$ git a firebase.json .gitignore angular.json package* src/app/app.config.ts 
+Patroclus:~/Programming/emulator-demo (main +)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .gitignore
+	modified:   angular.json
+	new file:   firebase.json
+	modified:   package-lock.json
+	modified:   package.json
+	modified:   src/app/app.config.ts
+
+Patroclus:~/Programming/emulator-demo (main +)$ git cm "ng add @angular/fire"
+[main 45df9ca] ng add @angular/fire
+ 6 files changed, 843 insertions(+), 72 deletions(-)
+ create mode 100644 firebase.json
+Patroclus:~/Programming/emulator-demo (main)$ npx firebase --version
+13.31.1
+Patroclus:~/Programming/emulator-demo (main)$ npx ng g s Demo 
+CREATE src/app/demo.service.spec.ts (347 bytes)
+CREATE src/app/demo.service.ts (133 bytes)
+Patroclus:~/Programming/emulator-demo (main)$ subl .
+Patroclus:~/Programming/emulator-demo (main)$ prettier --write /Users/rgant/Programming/emulator-demo/src/app/app.config.ts
+Running node v22.12.0 (npm v11.1.0)
+src/app/app.config.ts 20ms
+Patroclus:~/Programming/emulator-demo (main *)$ npx firebase emulators:init
+Error: emulators:init is not a Firebase command
+
+Did you mean emulators:exec?
+Patroclus:~/Programming/emulator-demo (main *)$ npx firebase --help
+Usage: firebase [options] [command]
+
+Options:
+  -V, --version                                                                     output the version number
+  -P, --project <alias_or_project_id>                                               the Firebase project to use for this command
+  --account <email>                                                                 the Google account to use for authorization
+  -j, --json                                                                        output JSON instead of text, also triggers non-interactive mode
+  --token <token>                                                                   DEPRECATED - will be removed in a future major version - supply an auth token for this command
+  --non-interactive                                                                 error out of the command instead of waiting for prompts
+  -i, --interactive                                                                 force prompts to be displayed
+  --debug                                                                           print verbose debug output and keep a debug log file
+  -c, --config <path>                                                               path to the firebase.json file to use for configuration
+  -h, --help                                                                        display help for command
+
+Commands:
+  appdistribution:distribute [options] <release-binary-file>                        upload a release binary and optionally distribute it to testers and run automated tests
+  appdistribution:testers:list [group]                                              list testers in project
+  appdistribution:testers:add [options] [emails...]                                 add testers to project (and possibly group)
+  appdistribution:testers:remove [options] [emails...]                              remove testers from a project (or group)
+  appdistribution:groups:list|appdistribution:group:list                            list groups in project
+  appdistribution:groups:create|appdistribution:group:create <displayName> [alias]  create group in project
+  appdistribution:groups:delete|appdistribution:group:delete <alias>                delete group from a project
+  apps:create [options] [platform] [displayName]                                    create a new Firebase app. [platform] can be IOS, ANDROID or WEB (case insensitive).
+  apps:list [platform]                                                              list the registered apps of a Firebase project. Optionally filter apps by [platform]: IOS, ANDROID or WEB (case insensitive)
+  apps:init [options] [platform] [appId]                                            Automatically download and create config of a Firebase app.
+  apps:sdkconfig [options] [platform] [appId]                                       print the Google Services config of a Firebase app. [platform] can be IOS, ANDROID or WEB (case insensitive)
+  apps:android:sha:list <appId>                                                     list the SHA certificate hashes for a given app id.
+  apps:android:sha:create <appId> <shaHash>                                         add a SHA certificate hash for a given app id.
+  apps:android:sha:delete <appId> <shaId>                                           delete a SHA certificate hash for a given app id.
+  auth:export [options] [dataFile]                                                  Export accounts from your Firebase project into a data file
+  auth:import [options] [dataFile]                                                  import users into your Firebase project from a data file(.csv or .json)
+  crashlytics:symbols:upload [options] <symbolFiles...>                             upload symbols for native code, to symbolicate stack traces
+  crashlytics:mappingfile:generateid [options]                                      generate a mapping file id and write it to an Android resource file, which will be built into the app
+  crashlytics:mappingfile:upload [options] <mappingFile>                            upload a ProGuard/R8-compatible mapping file to deobfuscate stack traces
+  database:get [options] <path>                                                     fetch and print JSON data at the specified path
+  database:import [options] <path> [infile]                                         non-atomically import the contents of a JSON file to the specified path in Realtime Database
+  database:instances:create [options] <instanceName>                                create a realtime database instance
+  database:instances:list [options]                                                 list realtime database instances, optionally filtered by a specified location
+  database:profile [options]                                                        profile the Realtime Database and generate a usage report
+  database:push [options] <path> [infile]                                           add a new JSON object to a list of data in your Firebase
+  database:remove [options] <path>                                                  remove data from your Firebase at the specified path
+  database:set [options] <path> [infile]                                            store JSON data at the specified path via STDIN, arg, or file
+  database:settings:get [options] <path>                                            read the realtime database setting at path
+  database:settings:set [options] <path> <value>                                    set the realtime database setting at path.
+  database:update [options] <path> [infile]                                         update some of the keys for the defined path in your Firebase
+  deploy [options]                                                                  deploy code and assets to your Firebase project
+  emulators:exec [options] <script>                                                 start the local Firebase emulators, run a test script, then shut down the emulators
+  emulators:export [options] <path>                                                 export data from running emulators
+  emulators:start [options]                                                         start the local Firebase emulators
+  experimental:functions:shell [options]                                            launch full Node shell with emulated functions. (Alias for `firebase functions:shell.)
+  experiments:list                                                                  list all experiments, along with a description of each experiment and whether it is currently enabled
+  experiments:describe <experiment>                                                 describe what an experiment does when enabled
+  experiments:enable <experiment>                                                   enable an experiment on this machine
+  experiments:disable <experiment>                                                  disable an experiment on this machine
+  ext                                                                               display information on how to use ext commands and extensions installed to your project
+  ext:configure [options] <extensionInstanceId>                                     configure an existing extension instance
+  ext:info [options] <extensionName>                                                display information about an extension by name (extensionName@x.y.z for a specific version)
+  ext:export [options]                                                              export all Extension instances installed on a project to a local Firebase directory
+  ext:install [options] [extensionRef]                                              add an uploaded extension to firebase.json if [publisherId/extensionId] is provided;or, add a local extension if [localPath]
+                                                                                    is provided
+  ext:list                                                                          list all the extensions that are installed in your Firebase project
+  ext:uninstall [options] <extensionInstanceId>                                     uninstall an extension that is installed in your Firebase project by instance ID
+  ext:update [options] <extensionInstanceId> [updateSource]                         update an existing extension instance to the latest version, or to a specific version if provided
+  ext:sdk:install [options] <extensionName>                                         get an SDK for this extension. The SDK will be put in the 'generated' directory
+  ext:dev:init                                                                      initialize files for writing an extension in the current directory
+  ext:dev:list <publisherId>                                                        list all extensions uploaded under publisher ID
+  ext:dev:register                                                                  register a publisher ID; run this before publishing your first extension.
+  ext:dev:deprecate [options] <extensionRef> [versionPredicate]                     deprecate extension versions that match the version predicate
+  ext:dev:undeprecate <extensionRef> <versionPredicate>                             undeprecate extension versions that match the version predicate
+  ext:dev:upload [options] <extensionRef>                                           upload a new version of an extension
+  ext:dev:usage <publisherId>                                                       get usage for an extension
+  firestore:delete [options] [path]                                                 Delete data from Cloud Firestore.
+  firestore:indexes [options]                                                       List indexes in your project's Cloud Firestore database.
+  firestore:locations                                                               List possible locations for your Cloud Firestore project.
+  firestore:databases:list                                                          List databases in your Cloud Firestore project.
+  firestore:databases:get [database]                                                Get database in your Cloud Firestore project.
+  firestore:databases:create [options] <database>                                   Create a database in your Firebase project.
+  firestore:databases:update [options] <database>                                   Update a database in your Firebase project. Must specify at least one property to update.
+  firestore:databases:delete [options] <database>                                   Delete a database in your Cloud Firestore project. Database delete protection state must be disabled. To do so, use the
+                                                                                    update command: firebase firestore:databases:update <database> --delete-protection DISABLED
+  firestore:databases:restore [options]                                             Restore a Firestore database in your Firebase project.
+  firestore:backups:list [options]                                                  List all Cloud Firestore backups in a given location
+  firestore:backups:get <backup>                                                    Get a Cloud Firestore database backup.
+  firestore:backups:delete [options] <backup>                                       Delete a backup under your Cloud Firestore database.
+  firestore:backups:schedules:list [options]                                        List backup schedules under your Cloud Firestore database.
+  firestore:backups:schedules:create [options]                                      Create a backup schedule under your Cloud Firestore database.
+  firestore:backups:schedules:update [options] <backupSchedule>                     Update a backup schedule under your Cloud Firestore database.
+  firestore:backups:schedules:delete [options] <backupSchedule>                     Delete a backup schedule under your Cloud Firestore database.
+  functions:config:clone [options]                                                  clone environment config from another project
+  functions:config:export                                                           Export environment config as environment variables in dotenv format
+  functions:config:get [path]                                                       fetch environment config stored at the given path
+  functions:config:set [values...]                                                  set environment config with key=value syntax
+  functions:config:unset [keys...]                                                  unset environment config at the specified path(s)
+  functions:delete [options] [filters...]                                           delete one or more Cloud Functions by name or group name.
+  functions:log [options]                                                           read logs from deployed functions
+  functions:shell [options]                                                         launch full Node shell with emulated functions
+  functions:list                                                                    list all deployed functions in your Firebase project
+  functions:secrets:access <KEY>[@version>                                          Access secret value given secret and its version. Defaults to accessing the latest version.
+  functions:secrets:destroy [options] <KEY>[@version>                               Destroy a secret. Defaults to destroying the latest version.
+  functions:secrets:get <KEY>                                                       Get metadata for secret and its versions
+  functions:secrets:describe <KEY>                                                  Get metadata for secret and its versions. Alias for functions:secrets:get to align with gcloud
+  functions:secrets:prune [options]                                                 Destroys unused secrets
+  functions:secrets:set [options] <KEY>                                             Create or update a secret for use in Cloud Functions for Firebase.
+  help [command]                                                                    display help information
+  hosting:channel:create [options] [channelId]                                      create a Firebase Hosting channel
+  hosting:channel:delete [options] <channelId>                                      delete a Firebase Hosting channel
+  hosting:channel:deploy [options] [channelId]                                      deploy to a specific Firebase Hosting channel
+  hosting:channel:list [options]                                                    list all Firebase Hosting channels for your project
+  hosting:channel:open [options] [channelId]                                        opens the URL for a Firebase Hosting channel
+  hosting:clone <source> <targetChannel>                                            clone a version from one site to another
+  hosting:disable [options]                                                         stop serving web traffic to your Firebase Hosting site
+  hosting:sites:create [options] [siteId]                                           create a Firebase Hosting site
+  hosting:sites:delete [options] <siteId>                                           delete a Firebase Hosting site
+  hosting:sites:get <siteId>                                                        print info about a Firebase Hosting site
+  hosting:sites:list                                                                list Firebase Hosting sites
+  init [feature]                                                                    Interactively configure the current directory as a Firebase project or initialize new features in an already configured Firebase project directory.
+  
+  This command will create or update 'firebase.json' and '.firebaserc' configuration files in the current directory.
+  
+  To initialize a specific Firebase feature, run 'firebase init [feature]'. Valid features are:
+  
+    - apphosting
+    - database
+    - dataconnect
+    - dataconnect:sdk
+    - emulators
+    - extensions
+    - firestore
+    - functions
+    - genkit
+    - hosting
+    - hosting:github
+    - remoteconfig
+    - storage
+  apphosting:backends:list [options]                                                list Firebase App Hosting backends
+  apphosting:backends:create [options]                                              create a Firebase App Hosting backend
+  apphosting:backends:get [options] <backend>                                       print info about a Firebase App Hosting backend
+  apphosting:backends:delete [options] <backend>                                    delete a Firebase App Hosting backend
+  apphosting:secrets:set [options] <secretName>                                     create or update a secret for use in Firebase App Hosting
+  apphosting:secrets:grantaccess [options] <secretName>                             grant service accounts permissions to the provided secret
+  apphosting:secrets:describe <secretName>                                          Get metadata for secret and its versions.
+  apphosting:secrets:access <secretName[@version]>                                  Access secret value given secret and its version. Defaults to accessing the latest version.
+  apphosting:rollouts:create [options] <backendId>                                  create a rollout using a build for an App Hosting backend
+  apphosting:config:export [options]                                                Export App Hosting configurations such as secrets into an apphosting.local.yaml file
+  login [options]                                                                   log the CLI into Firebase
+  login:add [options] [email]                                                       authorize the CLI for an additional account
+  login:ci [options]                                                                generate an access token for use in non-interactive environments
+  login:list                                                                        list authorized CLI accounts
+  login:use <email>                                                                 set the default account to use for this project directory or the global default account if not in a Firebase project
+                                                                                    directory
+  logout [email]                                                                    log the CLI out of Firebase
+  open [link]                                                                       quickly open a browser to relevant project resources
+  projects:addfirebase [projectId]                                                  add Firebase resources to a Google Cloud Platform project
+  projects:create [options] [projectId]                                             creates a new Google Cloud Platform project, then adds Firebase resources to the project
+  projects:list                                                                     list all Firebase projects you have access to
+  remoteconfig:get [options]                                                        get a Firebase project's Remote Config template
+  remoteconfig:rollback [options]                                                   roll back a project's published Remote Config template to the one specified by the provided version number
+  remoteconfig:versions:list [options]                                              get a list of Remote Config template versions that have been published for a Firebase project
+  serve [options]                                                                   start a local server for your static assets
+  setup:emulators:database                                                          downloads the database emulator
+  setup:emulators:firestore                                                         downloads the firestore emulator
+  setup:emulators:pubsub                                                            downloads the pubsub emulator
+  setup:emulators:storage                                                           downloads the storage emulator
+  setup:emulators:ui                                                                downloads the ui emulator
+  setup:emulators:dataconnect                                                       downloads the dataconnect emulator
+  dataconnect:services:list                                                         list all deployed services in your Firebase project
+  dataconnect:sql:diff [serviceId]                                                  displays the differences between  a local DataConnect schema and your CloudSQL database's current schema
+  dataconnect:sql:migrate [options] [serviceId]                                     migrates your CloudSQL database's schema to match your local DataConnect schema
+  dataconnect:sql:grant [options] [serviceId]                                       Grants the SQL role <role> to the provided user or service account <email>.
+  dataconnect:sql:shell [serviceId]                                                 Starts a shell connected directly to your dataconnect cloudsql instance.
+  dataconnect:sdk:generate [options]                                                generates typed SDKs for your Data Connect connectors
+  target [type]                                                                     display configured deploy targets for the current project
+  target:apply <type> <name> <resources...>                                         apply a deploy target to a resource
+  target:clear <type> <target>                                                      clear all resources from a named resource target
+  target:remove <type> <resource>                                                   remove a resource target
+  use [options] [alias_or_project_id]                                               set an active Firebase project for your working directory
+Patroclus:~/Programming/emulator-demo (main *)$ npx firebase init emulators
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/rgant/Programming/emulator-demo
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add, 
+but for now we'll just set up a default project.
+
+? Please select an option: Use an existing project
+? Select a default Firebase project for this directory: brainfry-app (The Brain Fry)
+i  Using project brainfry-app (The Brain Fry)
+
+=== Emulators Setup
+? Which Firebase emulators do you want to set up? Press Space to select emulators, then Enter to confirm your choices. Firestore Emulator
+? Which port do you want to use for the firestore emulator? 8080
+? Would you like to enable the Emulator UI? Yes
+? Which port do you want to use for the Emulator UI (leave empty to use any available port)? 
+? Would you like to download the emulators now? Yes
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+
+✔  Firebase initialization complete!
+Patroclus:~/Programming/emulator-demo (main *)$ git s
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   firebase.json
+	modified:   src/app/app.config.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.firebaserc
+	src/app/demo.service.spec.ts
+	src/app/demo.service.ts
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Patroclus:~/Programming/emulator-demo (main *)$ git ap
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+modified: firebase.json
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+@@ -1 +1,11 @@
+-{}
+\ No newline at end of file
++{
++  "emulators": {
++    "firestore": {
++      "port": 8080
++    },
++    "ui": {
++      "enabled": true
++    },
++    "singleProjectMode": true
++  }
++}
+(1/1) Stage this hunk [y,n,q,a,d,e,p,?]? y
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+modified: src/app/app.config.ts
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+@@ -6,5 +6,19 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+ 
+ export const appConfig: ApplicationConfig = {
+-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideFirebaseApp(() => initializeApp({ projectId: "brainfry-app", appId: "1:207926801743:web:cab96e3b19b07047b0813a", storageBucket: "brainfry-app.appspot.com", apiKey: "AIzaSyB75fqz0szrfVCLvpil9_t9UPQlLYplNcI", authDomain: "brainfry-app.firebaseapp.com", messagingSenderId: "207926801743" })), provideFirestore(() => getFirestore())]
++  providers: [
++    provideZoneChangeDetection({ eventCoalescing: true }),
++    provideRouter(routes),
++    provideFirebaseApp(() =>
++      initializeApp({
++        projectId: 'brainfry-app',
++        appId: '1:207926801743:web:cab96e3b19b07047b0813a',
++        storageBucket: 'brainfry-app.appspot.com',
++        apiKey: 'AIzaSyB75fqz0szrfVCLvpil9_t9UPQlLYplNcI',
++        authDomain: 'brainfry-app.firebaseapp.com',
++        messagingSenderId: '207926801743',
++      }),
++    ),
++    provideFirestore(() => getFirestore()),
++  ],
+ };
+(1/1) Stage this hunk [y,n,q,a,d,e,p,?]? y
+
+Patroclus:~/Programming/emulator-demo (main +)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   firebase.json
+	modified:   src/app/app.config.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.firebaserc
+	src/app/demo.service.spec.ts
+	src/app/demo.service.ts
+
+Patroclus:~/Programming/emulator-demo (main +)$ git a .firebaserc src/app/dem
+demo.service.spec.ts  demo.service.ts       
+Patroclus:~/Programming/emulator-demo (main +)$ git a .firebaserc src/app/demo.service.*
+Patroclus:~/Programming/emulator-demo (main +)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   firebase.json
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+
+Patroclus:~/Programming/emulator-demo (main +)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   firebase.json
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/demo.service.spec.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	src/app/firestore.emulator.spec.ts
+
+Patroclus:~/Programming/emulator-demo (main *+)$ git a src/app/firestore.emulator.spec.ts
+Patroclus:~/Programming/emulator-demo (main *+)$ git a src/app/app.component.spec.ts
+Patroclus:~/Programming/emulator-demo (main *+)$ git ap 
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+modified: src/app/demo.service.spec.ts
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+@@ -1,16 +1,19 @@
+ import { TestBed } from '@angular/core/testing';
+ 
+ import { DemoService } from './demo.service';
++import { provideEmulatedFirestore } from './firestore.emulator.spec';
+ 
+-describe('DemoService', () => {
++describe('DemoService', (): void => {
+   let service: DemoService;
+ 
+-  beforeEach(() => {
+-    TestBed.configureTestingModule({});
++  beforeEach((): void => {
++    TestBed.configureTestingModule({
++      providers: [ provideEmulatedFirestore() ],
++    });
+     service = TestBed.inject(DemoService);
+   });
+ 
+-  it('should be created', () => {
++  it('should be created', (): void => {
+     expect(service).toBeTruthy();
+   });
+ });
+(1/1) Stage this hunk [y,n,q,a,d,s,e,p,?]? y
+
+Patroclus:~/Programming/emulator-demo (main +)$ bgc
+Patroclus:~/Programming/emulator-demo (main +)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 11:40:56.953:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 11:40:56.954:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 11:40:56.956:INFO [launcher]: Starting browser Chrome
+14 02 2025 11:40:57.539:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket z702788c98uWVPgGAAAB with id 29336008
+Chrome 133.0.0.0 (Mac OS 10.15.7) DemoService should be created FAILED
+	NullInjectorError: R3InjectorError(DynamicTestModule)[DemoService -> Firestore -> InjectionToken angularfire2.firestore-instances -> [object Object] -> FirebaseApps -> FirebaseApps]: 
+	  NullInjectorError: No provider for FirebaseApps!
+	error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'DemoService', 'Firestore', 'InjectionToken angularfire2.firestore-instances', '[object Object]', 'FirebaseApps', 'FirebaseApps' ] })
+	    at NullInjector.get (node_modules/@angular/core/fesm2022/core.mjs:1679:27)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/core.mjs:2202:33)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/core.mjs:2202:33)
+	    at injectInjectorOnly (node_modules/@angular/core/fesm2022/core.mjs:1119:40)
+	    at ɵɵinject (node_modules/@angular/core/fesm2022/core.mjs:1125:60)
+	    at injectArgs (node_modules/@angular/core/fesm2022/core.mjs:1256:23)
+	    at Object.factory (node_modules/@angular/core/fesm2022/core.mjs:2428:52)
+	    at callback (node_modules/@angular/core/fesm2022/core.mjs:2325:47)
+	    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/core.mjs:884:9)
+	    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/core.mjs:2324:21)
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 (1 FAILED) (0.009 secs / 0.006 secs)
+TOTAL: 1 FAILED, 0 SUCCESS
+⚠  Script exited unsuccessfully (code 1)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+
+Error: Script "ng test --no-watch" exited with code 1
+Patroclus:~/Programming/emulator-demo (main +)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 11:43:39.062:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 11:43:39.063:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 11:43:39.065:INFO [launcher]: Starting browser Chrome
+14 02 2025 11:43:39.621:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket hooZsLZlEf_JXYhOAAAB with id 1503922
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 SUCCESS (0.009 secs / 0.006 secs)
+TOTAL: 1 SUCCESS
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+Patroclus:~/Programming/emulator-demo (main *+)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 11:44:59.417:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 11:44:59.418:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 11:44:59.420:INFO [launcher]: Starting browser Chrome
+14 02 2025 11:44:59.970:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket ekumHF8HMkauuYVjAAAB with id 46668885
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/docs/zones.md'
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 0 of 1 SUCCESS (0 secs / 0 secs)
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/dChrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 SUCCESS (1.138 secs / 1.134 secs)
+TOTAL: 1 SUCCESS
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+Patroclus:~/Programming/emulator-demo (main *+)$ npx firebase emulators:exec 'java -XshowSettings:properties -version'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: java -XshowSettings:properties -version
+Property settings:
+    file.encoding = UTF-8
+    file.separator = /
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    java.class.path = 
+    java.class.version = 61.0
+    java.home = /Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+    java.io.tmpdir = /var/folders/0z/3f6c6fvd75b9t93szh2_jjs00000gn/T/
+    java.library.path = /Users/rgant/Library/Java/Extensions
+        /Library/Java/Extensions
+        /Network/Library/Java/Extensions
+        /System/Library/Java/Extensions
+        /usr/lib/java
+        .
+    java.runtime.name = Java(TM) SE Runtime Environment
+    java.runtime.version = 17.0.1+12-LTS-39
+    java.specification.name = Java Platform API Specification
+    java.specification.vendor = Oracle Corporation
+    java.specification.version = 17
+    java.vendor = Oracle Corporation
+    java.vendor.url = https://java.oracle.com/
+    java.vendor.url.bug = https://bugreport.java.com/bugreport/
+    java.version = 17.0.1
+    java.version.date = 2021-10-19
+    java.vm.compressedOopsMode = Zero based
+    java.vm.info = mixed mode, sharing
+    java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+    java.vm.specification.name = Java Virtual Machine Specification
+    java.vm.specification.vendor = Oracle Corporation
+    java.vm.specification.version = 17
+    java.vm.vendor = Oracle Corporation
+    java.vm.version = 17.0.1+12-LTS-39
+    jdk.debug = release
+    line.separator = \n 
+    native.encoding = UTF-8
+    os.arch = x86_64
+    os.name = Mac OS X
+    os.version = 15.3
+    path.separator = :
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.arch.data.model = 64
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home/lib
+    sun.cpu.endian = little
+    sun.io.unicode.encoding = UnicodeBig
+    sun.java.launcher = SUN_STANDARD
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    sun.stderr.encoding = UTF-8
+    sun.stdout.encoding = UTF-8
+    user.country = US
+    user.dir = /Users/rgant/Programming/emulator-demo
+    user.home = /Users/rgant
+    user.language = en
+    user.name = rgant
+
+java version "17.0.1" 2021-10-19 LTS
+Java(TM) SE Runtime Environment (build 17.0.1+12-LTS-39)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-LTS-39, mixed mode, sharing)
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+Patroclus:~/Programming/emulator-demo (main *+)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 12:03:36.236:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 12:03:36.236:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 12:03:36.239:INFO [launcher]: Starting browser Chrome
+14 02 2025 12:03:36.803:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket jxu9zsdxlg3LiD2mAAAB with id 55854880
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/docs/zones.md'
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 0 of 1 SUCCESS (0 secs / 0 secs)
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/dChrome 133.0.0.0 (Mac OS 10.15.7) DemoService should create a new document FAILED
+	Error: Timeout - Async function did not complete within 500ms (custom timeout)
+	    at <Jasmine>
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 (1 FAILED) (0.512 secs / 0.509 secs)
+WARN: '[2025-02-14T17:03:37.880Z]  @firebase/firestore:', 'Firestore (11.3.1): WebChannelConnection', 'RPC 'Write' stream 0x8c5427b8 transport errored:', jd{type: 'c', target: Y{s: false, C: undefined, i: Ka{src: ..., g: ..., h: ...}, M: Y{s: ..., C: ..., i: ..., M: ..., F: ..., g: ..., l: ..., h: ..., v: ..., u: ..., j: ...}, F: null, g: Yc{Aa: ..., i: ..., j: ..., o: ..., S: ..., m: ..., H: ..., D: ..., ya: ..., g: ..., W: ..., I: ..., qa: ..., ia: ..., U: ..., Ya: ..., Va: ..., l: ..., s: ..., u: ..., C: ..., F: ..., X: ..., T: ..., za: ..., B: ..., v: ..., Y: ..., Ta: ..., cb: ..., Wa: ..., wa: ..., pa: ..., Xa: ..., Ca: ..., L: ..., J: ..., K: ..., h: ..., Da: ..., P: ..., O: ..., Ua: ..., ba: ..., ja: ..., ca: ..., R: ..., M: ..., A: ..., ka: ..., G: ...}, l: 'http://localhost:8080/google.firestore.v1.Firestore/Write/channel', h: Object{database: ...}, v: true, u: true, j: Z{g: ...}}, g: Y{s: false, C: undefined, i: Ka{src: ..., g: ..., h: ...}, M: Y{s: ..., C: ..., i: ..., M: ..., F: ..., g: ..., l: ..., h: ..., v: ..., u: ..., j: ...}, F: null, g: Yc{Aa: ..., i: ..., j: ..., o: ..., S: ..., m: ..., H: ..., D: ..., ya: ..., g: ..., W: ..., I: ..., qa: ..., ia: ..., U: ..., Ya: ..., Va: ..., l: ..., s: ..., u: ..., C: ..., F: ..., X: ..., T: ..., za: ..., B: ..., v: ..., Y: ..., Ta: ..., cb: ..., Wa: ..., wa: ..., pa: ..., Xa: ..., Ca: ..., L: ..., J: ..., K: ..., h: ..., Da: ..., P: ..., O: ..., Ua: ..., ba: ..., ja: ..., ca: ..., R: ..., M: ..., A: ..., ka: ..., G: ...}, l: 'http://localhost:8080/google.firestore.v1.Firestore/Write/channel', h: Object{database: ...}, v: true, u: true, j: Z{g: ...}}, defaultPrevented: false, status: 1}
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 (1 FAILED) (0.512 secs / 0.509 secs)
+WARN: '[2025-02-14T17:03:37.880Z]  @firebase/firestore:', 'Firestore (11.3.1): WebChannelConnection', 'RPC 'Write' stream 0x8c5427b8 transport errored:', jd{type: 'c', target: Y{s: false, C: undefined, i: Ka{src: ..., g: ..., h: ...}, M: Y{s: ..., C: ..., i: ..., M: ..., F: ..., g: ..., l: ..., h: ..., v: ..., u: ..., j: ...}, F: null, g: Yc{Aa: ..., i: ..., j: ..., o: ..., S: ..., m: ..., H: ..., D: ..., ya: ..., g: ..., W: ..., I: ..., qa: ..., ia: ..., U: ..., Ya: ..., Va: ..., l: ..., s: ..., u: ..., C: ..., F: ..., X: ..., T: ..., za: ..., B: ..., v: ..., Y: ..., Ta: ..., cb: ..., Wa: ..., wa: ..., pa: ..., Xa: ..., Ca: ..., L: ..., J: ..., K: ..., h: ..., Da: ..., P: ..., O: ..., Ua: ..., ba: ..., ja: ..., ca: ..., R: ..., M: ..., A: ..., ka: ..., G: ...}, l: 'http://localhost:8080/google.firestore.v1.Firestore/Write/channel', h: Object{database: ...}, v: true, u: true, j: Z{g: ...}}, g: Y{s: false, C: undefined, i: Ka{src: ..., g: ..., h: ...}, M: Y{s: ..., C: ..., i: ..., M: ..., F: ..., g: ..., l: ..., h: ..., v: ..., u: ..., j: ...}, F: null, g: Yc{Aa: ..., i: ..., j: ..., o: ..., S: ..., m: ..., H: ..., D: ..., ya: ..., g: ..., W: ..., I: ..., qa: ..., ia: ..., U: ..., Ya: ..., Va: ..., l: ..., s: ..., u: ..., C: ..., F: ..., X: ..., T: ..., za: ..., B: ..., v: ..., Y: ..., Ta: ..., cb: ..., Wa: ..., wa: ..., pa: ..., Xa: ..., Ca: ..., L: ..., J: ..., K: ..., h: ..., Da: ..., P: ..., O: ..., Ua: ..., ba: ..., ja: ..., ca: ..., R: ..., M: ..., A: ...Chrome 133.0.0.0 (Mac OS 10.15.7) ERROR
+  Disconnected , because no message in 30000 ms.
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 (1 FAILED) DISCONNECTED (30.53 secs / 0.509 secs)
+Chrome 133.0.0.0 (Mac OS 10.15.7) ERROR
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 (1 FAILED) DISCONNECTED (30.53 secs / 0.509 secs)
+⚠  Script exited unsuccessfully (code 1)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+
+Error: Script "ng test --no-watch" exited with code 1
+Patroclus:~/Programming/emulator-demo (main *+)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   firebase.json
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .gitignore
+	modified:   src/app/app.config.ts
+	modified:   src/app/demo.service.spec.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	firebase-debug.log
+	firestore-debug.log
+	src/app/firebase-app.provider.ts
+
+Patroclus:~/Programming/emulator-demo (main *+)$ git a src/app/firebase-app.provider.ts firebase-debug.log firestore-debug.log
+Patroclus:~/Programming/emulator-demo (main *+)$ git a .gitignore 
+Patroclus:~/Programming/emulator-demo (main *+)$ git a src/app/app.config.ts
+Patroclus:~/Programming/emulator-demo (main *+)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   firebase-debug.log
+	modified:   firebase.json
+	new file:   firestore-debug.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   src/app/demo.service.spec.ts
+
+Patroclus:~/Programming/emulator-demo (main *+)$ git ap
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+modified: src/app/demo.service.spec.ts
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+@@ -1,6 +1,7 @@
+ import { TestBed } from '@angular/core/testing';
+ 
+ import { DemoService } from './demo.service';
++import { provideOurFirebaseApp } from './firebase-app.provider';
+ import { provideEmulatedFirestore } from './firestore.emulator.spec';
+ 
+ describe('DemoService', (): void => {
+(1/2) Stage this hunk [y,n,q,a,d,j,J,g,/,e,p,?]? y
+@@ -8,12 +9,13 @@ describe('DemoService', (): void => {
+ 
+   beforeEach((): void => {
+     TestBed.configureTestingModule({
+-      providers: [ provideEmulatedFirestore() ],
++      providers: [ provideOurFirebaseApp(), provideEmulatedFirestore() ],
+     });
+     service = TestBed.inject(DemoService);
+   });
+ 
+-  it('should be created', (): void => {
+-    expect(service).toBeTruthy();
++  it('should create a new document', async (): Promise<void> => {
++    const id = await service.create('Demo Document');
++    expect(id).toBeTruthy();
+   });
+ });
+(2/2) Stage this hunk [y,n,q,a,d,K,g,/,s,e,p,?]? y
+
+Patroclus:~/Programming/emulator-demo (main +)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   firebase-debug.log
+	modified:   firebase.json
+	new file:   firestore-debug.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Terminal Saved Output.txt
+
+Patroclus:~/Programming/emulator-demo (main +)$ mv Terminal Saved Output.txt Terminal-Saved-Output.txt
+mv: Terminal-Saved-Output.txt is not a directory
+Patroclus:~/Programming/emulator-demo (main +)$ mv 'Terminal Saved Output.txt' Terminal-Saved-Output.txt
+Patroclus:~/Programming/emulator-demo (main +)$ git a Terminal-Saved-Output.txt 
+Patroclus:~/Programming/emulator-demo (main +)$ git s
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .firebaserc
+	modified:   .gitignore
+	new file:   Terminal-Saved-Output.txt
+	new file:   firebase-debug.log
+	modified:   firebase.json
+	new file:   firestore-debug.log
+	deleted:    src/app/app.component.spec.ts
+	modified:   src/app/app.config.ts
+	new file:   src/app/demo.service.spec.ts
+	new file:   src/app/demo.service.ts
+	new file:   src/app/firebase-app.provider.ts
+	new file:   src/app/firestore.emulator.spec.ts
+
+Patroclus:~/Programming/emulator-demo (main +)$ npx firebase emulators:exec 'ng test --no-watch'
+i  emulators: Starting emulators: firestore
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: ng test --no-watch
+✔ Browser application bundle generation complete.
+14 02 2025 12:06:09.081:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+14 02 2025 12:06:09.081:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+14 02 2025 12:06:09.083:INFO [launcher]: Starting browser Chrome
+14 02 2025 12:06:09.645:INFO [Chrome 133.0.0.0 (Mac OS 10.15.7)]: Connected on socket PRVePZ3-T0L6gvZMAAAB with id 17638249
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/docs/zones.md'
+Chrome 133.0.0.0 (Mac OS 10.15.7): Executed 0 of 1 SUCCESS (0 secs / 0 secs)
+WARN: 'Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/dChrome 133.0.0.0 (Mac OS 10.15.7): Executed 1 of 1 SUCCESS (1.205 secs / 1.202 secs)
+TOTAL: 1 SUCCESS
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator
+Patroclus:~/Programming/emulator-demo (main *+)$ java -version
+java version "17.0.1" 2021-10-19 LTS
+Java(TM) SE Runtime Environment (build 17.0.1+12-LTS-39)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-LTS-39, mixed mode, sharing)
+Patroclus:~/Programming/emulator-demo (main *+)$ 
